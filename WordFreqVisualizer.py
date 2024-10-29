@@ -39,15 +39,15 @@ with st.sidebar:
             
             submitted = st.form_submit_button('분석 시작')
         
-if submitted:
-    status = st.info('분석중입니다.')
-    #filename = '../daum_movie_review.csv'
-    counter = tm.analyze_word_freq(filename, col)
-    
-    if counter:
-        status.info('분석이 완료되었습니다.')
-        if freq: stv.visualize_barhgraph(counter, freq_num)
-        if wordcloud: stv.visualize_wordcloud(counter, wc_num)
-        
-    else:
-        status.error('분석에 실패했습니다.')
+        if submitted:
+            status = st.info('분석중입니다.')
+            #filename = '../daum_movie_review.csv'
+            counter = tm.analyze_word_freq(filename, col)
+            
+            if counter:
+                status.info('분석이 완료되었습니다.')
+                if freq: stv.visualize_barhgraph(counter, freq_num)
+                if wordcloud: stv.visualize_wordcloud(counter, wc_num)
+                
+            else:
+                status.error('분석에 실패했습니다.')
