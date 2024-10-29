@@ -27,9 +27,10 @@ def view_raw_data(data_file):
 with st.sidebar:    
     st.write('## 영화 키워드 분석 메뉴')
     filename = st.file_uploader("분석할 파일", type=['csv'])
+    if filename:
+        if st.button("분석할 데이터 보기"):
+            view_raw_data(filename)
     col = st.text_input("분석할 컬럼")
-    if st.button("분석할 데이터 보기"):
-        view_raw_data(filename)
     with st.form('my_form'):
         freq = st.checkbox('빈도수 그래프')
         freq_num = st.slider('단어수', 10, 30, 20, 1)
