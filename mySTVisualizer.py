@@ -10,7 +10,7 @@ def is_running_on_localserver():
     #return "STREAMLIT_SERVER_PORT" in os.environ
     
     #server_address = os.environ.get("SERVER_NAME", "localhost")
-    server_address = st.server.server_address[0]
+    server_address = os.environ.get("STREAMLIT_SERVER", "localhost")
     print(server_address)
     if server_address not in ["localhost"]:
         return False
