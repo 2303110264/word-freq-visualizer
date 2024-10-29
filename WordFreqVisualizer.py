@@ -30,14 +30,14 @@ with st.sidebar:
     if filename:
         if st.button("분석할 데이터 보기"):
             view_raw_data(filename)
-    col = st.text_input("분석할 컬럼")
-    with st.form('my_form'):
-        freq = st.checkbox('빈도수 그래프')
-        freq_num = st.slider('단어수', 10, 30, 20, 1)
-        wordcloud = st.checkbox('워드클라우드')
-        wc_num = st.slider('단어수', 50, 1000, 50, 10)
-        
-        submitted = st.form_submit_button('분석 시작')
+        col = st.text_input("분석할 컬럼")
+        with st.form('my_form'):
+            freq = st.checkbox('빈도수 그래프')
+            freq_num = st.slider('단어수', 10, 30, 20, 1)
+            wordcloud = st.checkbox('워드클라우드')
+            wc_num = st.slider('단어수', 50, 1000, 50, 10)
+            
+            submitted = st.form_submit_button('분석 시작')
         
 if submitted:
     status = st.info('분석중입니다.')
