@@ -23,7 +23,7 @@ st.set_page_config(
 
 @st.dialog("분석할 데이터 확인")
 def view_raw_data():
-    df = pd.read_csv(st.session_state.data_file)
+    df = pd.read_csv(st.session_state.filename)
     st.write(df.info())
     head_num = st.slider('출력 라인 수', 1, 100, 10, 1)
     st.write(df.head(head_num))
