@@ -12,8 +12,8 @@ def is_running_on_localserver():
     #server_address = os.environ.get("SERVER_NAME", "localhost")
     server_address = os.environ.get("STREAMLIT_SERVER", "localhost")
     print(server_address)
-    if server_address not in ["localhost"]:
-        return False
+    #if server_address not in ["localhost"]:
+    #    return False
     return True
 
 @st.cache_data
@@ -22,7 +22,8 @@ def visualize_barhgraph(counter, num_words):
     if is_running_on_localserver():
         #font_path = "c:/Windows/Fonts/malgun.ttf"
         font_path = "Hakgyoansim Badasseugi TTF L.ttf"
-        font_name = font_manager.FontProperties(fname=font_path).get_name() 
+        #font_name = font_manager.FontProperties(fname=font_path).get_name() 
+        font_name = "Hakgyoansim Badasseugi TTF L"
     else:
         font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
         font_name = 'NanumGothic'
