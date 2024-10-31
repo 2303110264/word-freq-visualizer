@@ -22,11 +22,11 @@ st.set_page_config(
 )
 
 @st.dialog("분석할 데이터 확인")
-def view_raw_data(data_file):
-    st.session_state.df = pd.read_csv(data_file)
-    st.write(st.session_state.df.info())
+def view_raw_data(st.session_state.data_file):
+    df = pd.read_csv(st.session_state.data_file)
+    st.write(df.info())
     head_num = st.slider('출력 라인 수', 1, 100, 10, 1)
-    st.write(st.session_state.df.head(head_num))
+    st.write(df.head(head_num))
     
 with st.sidebar:    
     st.write('## 영화 키워드 분석 메뉴')
