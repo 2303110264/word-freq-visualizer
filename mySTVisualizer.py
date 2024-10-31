@@ -20,7 +20,8 @@ def is_running_on_localserver():
 def visualize_barhgraph(counter, num_words):
 
     if is_running_on_localserver():
-        font_path = "c:/Windows/Fonts/malgun.ttf"
+        #font_path = "c:/Windows/Fonts/malgun.ttf"
+        font_path = "./Hakgyoansim Badasseugi TTF L.ttf"
         font_name = font_manager.FontProperties(fname=font_path).get_name() 
     else:
         font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
