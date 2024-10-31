@@ -12,7 +12,7 @@ from wordcloud import WordCloud
 #rc('font', family=font_name)
 
 global submitted
-submitted = false
+submitted = False
 
 st.set_page_config(
     page_title="Word Frequency Visualizer",
