@@ -24,7 +24,8 @@ st.set_page_config(
 @st.dialog("분석할 데이터 확인")
 def view_raw_data(data_file):
     st.session_state.df = pd.read_csv(data_file)
-    head_num = st.slider('출력 라인 수', 1, len(st.session_state.df), 10, 1)
+    st.write(st.session_state.df.info())
+    head_num = st.slider('출력 라인 수', 1, 100, 10, 1)
     st.write(st.session_state.df.head(head_num))
     
 with st.sidebar:    
