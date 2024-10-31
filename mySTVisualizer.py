@@ -24,6 +24,7 @@ def visualize_barhgraph(counter, num_words):
         font_path = "Hakgyoansim Badasseugi TTF L.ttf"
         #font_name = font_manager.FontProperties(fname=font_path).get_name() 
         font_name = "Hakgyoansim Badasseugi TTF L"
+        font_manager.fontManager.addfont(font_path)
     else:
         font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
         font_name = 'NanumGothic'
