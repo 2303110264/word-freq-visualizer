@@ -41,7 +41,7 @@ def visualize_barhgraph(counter, num_words):
 def visualize_wordcloud(counter, num_words):
         
     if is_running_on_localserver():
-        font_path = "c:/Windows/fonts/malgun.ttf"      
+        font_path = "Hakgyoansim Badasseugi TTF L.ttf"      
     else:    
         font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
 
